@@ -1,0 +1,8 @@
+.cover {
+    width: 100%;
+    height: 150px;
+    background-image: url("https://img.freepik.com/free-photo/wooden-bridge-koh-nangyuan-island-surat-thani-thailand_335224-1082.jpg?ga=GA1.1.1042927920.1736592210&semt=ais_hybrid");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
