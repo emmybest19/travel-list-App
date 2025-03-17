@@ -1,8 +1,30 @@
-.cover {
+/* .cover {
     width: 100%;
     height: 150px;
     background-image: url("https://img.freepik.com/free-photo/wooden-bridge-koh-nangyuan-island-surat-thani-thailand_335224-1082.jpg?ga=GA1.1.1042927920.1736592210&semt=ais_hybrid");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
+} */
+h1 {
+    /* text-align: center;
+    background-color: #f4a226;
+    font-family: "Monoton";
+    font-size: 8rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    word-spacing: 30px;
+    letter-spacing: -5px;
+    padding: 2.4rem 0; */
+
+    font-family: 'Lobster', cursive;
+    background-color: #FFB200;
+    font-size: 4rem;
+    color: black;
+    -webkit-text-stroke: 2px #706d6d; 
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }

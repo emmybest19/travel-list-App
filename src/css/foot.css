@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    width: 100%;
+
+}
+
+.container > footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    
+    text-align: center;
+    padding-block: 30px;
+    background-color: #00879E;
+
+}

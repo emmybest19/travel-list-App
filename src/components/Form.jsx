@@ -1,34 +1,51 @@
-import "../css/form.css"
-function Form() {
-    return (
-        <div className="wrapper">
-            <form action="">
-                <span>Are you preparing for a trip🫡? Please do well you to get your list ready</span>
-                <select name="select" id="">
-                    <option value="">1</option>
-                    <option value="">2</option>
-                    <option value="">3</option>
-                    <option value="">4</option>
-                    <option value="">5</option>
-                    <option value="">6</option>
-                    <option value="">7</option>
-                    <option value="">8</option>
-                    <option value="">9</option>
-                    <option value="">10</option>
-                    <option value="">11</option>
-                    <option value="">12</option>
-                    <option value="">13</option>
-                    <option value="">14</option>
-                    <option value="">15</option>
-                    <option value="">16</option>
-                    <option value="">17</option>
-                    <option value="">18</option>
-                </select>
-                <input type="text" name="text" id="text" placeholder="item.."/>
-            </form>
-            
-        </div>
-    )
+import { useState } from "react";
+import "../css/form.css";
+function Form({onAddItems}) {
+  const [describe, setDescribe] = useState("");
+  const [list, setList] = useState(1);
+  
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    if(!describe) return;
+
+    const newItem = { describe, list, packed: false, id: Date.now() };
+    onAddItems(newItem)
+
+    setDescribe("");
+    setList(1);
+  }
+  return (
+    <div className="wrapper">
+      <form action="" onSubmit={handleSubmit}>
+        <span>
+          Are you preparing for a trip🫡? Please do well you to get your list
+          ready
+        </span>
+        <select
+          name="select"
+          id=""
+          value={list}
+          onChange={(e) => setList(Number(e.target.value))}
+        >
+          {Array.from({ length: 30 }, (_, i) => i + 1).map((num) => (
+            <option value={num} key={num}>
+              {num}
+            </option>
+          ))}
+        </select>
+        <input
+          type="text"
+          name="text"
+          id="text"
+          placeholder="item.."
+          value={describe}
+          onChange={(e) => setDescribe(e.target.value)}
+        />
+        <button>Add</button>
+      </form>
+    </div>
+  );
 }
 
-export default Form
+export default Form;
